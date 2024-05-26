@@ -1,0 +1,3 @@
+ReWriteEngine On
+RewriteRule ^Clinic/([^/\.]+)?$/index.php [L]
+RewriteRule ^Clinic/([^/\.]+)/CLINIC/([^/\.]+)?$ /nurse_home.php [L]
