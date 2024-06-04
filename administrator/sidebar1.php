@@ -88,10 +88,10 @@ if(!isset($_SESSION['Administrator_login'])){
                     <li>
                       <a href='today-transaction.php' class='waves-effect'>Today Transaction</a>
                    </li> 
-                   <!-- <li>
-                      <a href='today-transaction.php' class='waves-effect'>List</a>
+                   <li>
+                      <a href='sample.php' class='waves-effect'>List</a>
                    </li> 
-                      <li>
+                      <!-- <li>
                         <a href='report.php' class='waves-effect'>Reports</a>
                       </li>  -->
                     </ul>
