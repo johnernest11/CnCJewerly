@@ -12,14 +12,20 @@ if (isset($_POST['confirmsubmit1'])){
     $Fullname =$_POST['fullname'];
     $Contact =$_POST['contact'];
     $Email =$_POST['email'];
-    $Description =$_POST['description'];
-    $UnitPrice =$_POST['unitPrice'];
+    if (isset($_POST['description']) && $_POST['description'] !== '') {
+        // Use the selected value from the dropdown
+        $Description = $_POST['description'];
+    } else if (isset($_POST['customDescription']) && $_POST['customDescription'] !== '') {
+        // Use the custom description entered by the user
+        $Description = $_POST['customDescription'];
+    }
+    $UnitPrice =$_POST['Unitprice'];
     $Grams =$_POST['grams'];
     $Date =$_POST['date'];
-    $TotalPrice =$_POST['totalPrice'];
+    $TotalPrice =$_POST['Totalprice'];
     $Shipping =$_POST['shipping'];
     $Insurance =$_POST['insurance'];
-    $Subtotal =$_POST['subtotal'];
+    $Subtotal =$_POST['subTotal'];
     $Deposit =$_POST['deposit'];
     $Discount =$_POST['discount'];
     $TotalAmount =$_POST['totalAmount'];
@@ -50,7 +56,7 @@ if (isset($_POST['confirmsubmit1'])){
             showConfirmButton: false,
             timer: 1500
             }).then(function() {
-            window.location = "add-transaction.php";
+            // window.location = "add-transaction.php";
         });
 </script>
                   <?php
